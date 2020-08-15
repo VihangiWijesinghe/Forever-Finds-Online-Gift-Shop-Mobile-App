@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Foreverfind</string>
+    <string name="register">Register to grab your lovely gifts</string>
+    <string name="name_logtxt">Full Name</string>
+    <string name="txtreg_phone">Phone Number</string>
+    <string name="txtreg_email">Email</string>
+    <string name="txt_pwd">Enter a Password</string>
+    <string name="txt_conpass">Confirm Password</string>
+    <string name="txt_create">Create Account</string>
+    <string name="txt_pass">Password</string>
+</resources>
