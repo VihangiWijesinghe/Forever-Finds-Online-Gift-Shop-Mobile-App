@@ -26,4 +26,28 @@
     <string name="txt_conpass">Confirm Password</string>
     <string name="txt_create">Create Account</string>
     <string name="txt_pass">Password</string>
+
+    <string name="app_name">Forever Finds</string>
+    <string name="delivery_request_form">Delivery Request Form</string>
+    <string name="receiver_full_name">Receiver full name:</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="mobile_number1">Phone Number</string>
+    <string name="submit">Submit</string>
+    <string name="delivery_address1"> Address1</string>
+    <string name="update">UPDATE</string>
+    <string name="edit_delivery_details">EDIT DELIVERY DETAILS</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="receiver_full_name1">Receiver Full Name</string>
+    <string name="status_delivered">Status: Delivered</string>
+    <string name="receiver_mobile">Receiver Mobile</string>
+    <string name="sender_name">Sender Name:</string>
+    <string name="order_no">Order No:</string>
+    <string name="receiver_name">Receiver Name:</string>
+    <string name="button1">Button</string>
+    <string name="address1">Address:</string>
+    <string name="delete">Delete</string>
+    <string name="item_01">Item 01</string>
+    <string name="price">Price</string>
+    <string name="name">RECEIVER NAME</string>
+    <string name="pendingOrders">Order No:</string>
 </resources>
