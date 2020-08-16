@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name= "img_width" >129dp</dimen>
+    <dimen name= "img_height"> 129dp</dimen>
+    <dimen name = "item_btn_width">129dp</dimen>
+    <dimen name = "item_btn_height">62dp</dimen>
+</resources>
