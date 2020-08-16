@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">Foreverfind</string>
+    <string name="txtItemf">Flowers</string>
+    <string name="txtItemcak">Cakes</string>
+    <string name="txtItemcho">Chocolates</string>
+    <string name="txt_ItemName">Item Name</string>
+    <string name="txt_des">Description</string>
+    <string name="txt_qty">Quantity</string>
+    <string name="txt_no_items">Number of items</string>
+    <string name="txt_tot">Total</string>
+    <string name="tot_Value">Value of Total</string>
+    <string name="txt_flow2"><b> Rose flower boquet 2500Rs</b></string>
+    <string name="shop_item">Item Name</string>
+    <string name="shop_des">Description</string>
+    <string name="btn_editshop">Edit</string>
+    <string name="txt_shop_price">Price</string>
+    <string name="btn_shop_delete">Delete</string>
+    <string name="shop_suotot">Sub Total</string>
+    <string name="btn_con_shop">Continue Shopping</string>
+    <string name="btn_shopPlaceOrder">Place Order</string>
     <string name="register">Register to grab your lovely gifts</string>
     <string name="name_logtxt">Full Name</string>
     <string name="txtreg_phone">Phone Number</string>
