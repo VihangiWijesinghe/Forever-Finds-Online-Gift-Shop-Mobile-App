@@ -1,6 +1,8 @@
 package com.example.foreverfind;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,27 +12,38 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+public class PaymentMethod extends AppCompatActivity{
 
-public class getStarted extends AppCompatActivity {
-    private Button button;
+    Button button1;
+    Button button2;
+    private DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_started);
+        setContentView(R.layout.activity_payment_method);
 
-        button= (Button) findViewById(R.id.button14);
-        button.setOnClickListener(new View.OnClickListener(){
+        button1=(Button)findViewById(R.id.btnDebit);
+        button2=(Button)findViewById(R.id.btnCredit);
+
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                openItemActivity();
+            public void onClick(View view) {
+                Intent intent = new Intent(PaymentMethod.this,PaymentConfirm.class);
+                startActivity(intent);
             }
         });
+
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaymentMethod.this,PaymentConfirm.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    public void openItemActivity(){
-        Intent intent= new Intent(this,ItemActivity.class);
-        startActivity(intent);
-    }
 
     public boolean onCreateOptionsMenu(Menu menu){
 
@@ -44,27 +57,27 @@ public class getStarted extends AppCompatActivity {
         switch(item.getItemId()){
 
             case R.id.nav_home:
-                intent = new Intent(getStarted.this,getStarted.class);
+                intent = new Intent(PaymentMethod.this,getStarted.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_profile:
-                intent = new Intent(getStarted.this,PersonalProfile.class);
+                intent = new Intent(PaymentMethod.this,PersonalProfile.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_shopcart:
-                intent = new Intent(getStarted.this,shoppingCart.class);
+                intent = new Intent(PaymentMethod.this,shoppingCart.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_orders:
-                intent = new Intent(getStarted.this,Orders.class);
+                intent = new Intent(PaymentMethod.this,Orders.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_message:
-                intent = new Intent(getStarted.this,Messages.class);
+                intent = new Intent(PaymentMethod.this,Messages.class);
                 startActivity(intent);
                 return true;
 
@@ -73,4 +86,6 @@ public class getStarted extends AppCompatActivity {
 
         }
     }
+
+
 }

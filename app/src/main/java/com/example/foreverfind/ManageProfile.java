@@ -10,26 +10,36 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.tabs.TabItem;
 
-public class getStarted extends AppCompatActivity {
-    private Button button;
+public class ManageProfile extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_started);
+        setContentView(R.layout.activity_manage_profile);
 
-        button= (Button) findViewById(R.id.button14);
-        button.setOnClickListener(new View.OnClickListener(){
+        Button btnfrg = findViewById(R.id.btnClearh);
+        Button btnfrg2 = findViewById(R.id.btnDeleteA);
+
+        btnfrg.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                openItemActivity();
+            public void onClick(View view) {
+
+                openDialog();
             }
         });
-    }
 
-    public void openItemActivity(){
-        Intent intent= new Intent(this,ItemActivity.class);
-        startActivity(intent);
+        btnfrg2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(ManageProfile.this, ConfirmDelete.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -44,27 +54,26 @@ public class getStarted extends AppCompatActivity {
         switch(item.getItemId()){
 
             case R.id.nav_home:
-                intent = new Intent(getStarted.this,getStarted.class);
-                startActivity(intent);
+                intent = new Intent(ManageProfile.this,getStarted.class);
                 return true;
 
             case R.id.nav_profile:
-                intent = new Intent(getStarted.this,PersonalProfile.class);
+                intent = new Intent(ManageProfile.this,PersonalProfile.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_shopcart:
-                intent = new Intent(getStarted.this,shoppingCart.class);
+                intent = new Intent(ManageProfile.this,shoppingCart.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_orders:
-                intent = new Intent(getStarted.this,Orders.class);
+                intent = new Intent(ManageProfile.this,Orders.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_message:
-                intent = new Intent(getStarted.this,Messages.class);
+                intent = new Intent(ManageProfile.this,Messages.class);
                 startActivity(intent);
                 return true;
 
@@ -72,5 +81,11 @@ public class getStarted extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+    public void openDialog(){
+
+        DialogExamples example = new DialogExamples();
+        example.show(getSupportFragmentManager(),"example");
+
     }
 }
