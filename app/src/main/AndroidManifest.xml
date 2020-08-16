@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PersonalProfile"></activity>
+        <activity android:name=".stockdetails"></activity>
+        <activity android:name=".Restock" />
+        <activity android:name=".AdminPanel" />
+        <activity android:name=".home" />
+        <activity android:name=".add" />
+        <activity android:name=".PersonalProfile" />
         <activity android:name=".PaymentSummary" />
         <activity android:name=".PaymentMethod" />
         <activity android:name=".PaymentConfirm" />
