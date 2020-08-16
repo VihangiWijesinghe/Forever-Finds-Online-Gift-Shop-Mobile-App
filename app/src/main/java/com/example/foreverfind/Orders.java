@@ -8,12 +8,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class Edit extends AppCompatActivity {
+public class Orders extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit);
+        setContentView(R.layout.activity_orders);
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -28,27 +28,27 @@ public class Edit extends AppCompatActivity {
         switch(item.getItemId()){
 
             case R.id.nav_home:
-                intent = new Intent(Edit.this,getStarted.class);
+                intent = new Intent(Orders.this,getStarted.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_profile:
-                intent = new Intent(Edit.this,PersonalProfile.class);
+                intent = new Intent(Orders.this,PersonalProfile.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_shopcart:
-                intent = new Intent(Edit.this,shoppingCart.class);
+                intent = new Intent(Orders.this,shoppingCart.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_orders:
-                intent = new Intent(Edit.this,Orders.class);
+                intent = new Intent(Orders.this,Orders.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_message:
-                intent = new Intent(Edit.this,Messages.class);
+                intent = new Intent(Orders.this,Messages.class);
                 startActivity(intent);
                 return true;
 

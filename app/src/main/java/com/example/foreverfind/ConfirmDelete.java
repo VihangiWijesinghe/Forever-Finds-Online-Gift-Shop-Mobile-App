@@ -1,7 +1,13 @@
 package com.example.foreverfind;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,37 +15,49 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class shoppingCart extends AppCompatActivity {
-    Button button,button1;
+import com.google.android.material.navigation.NavigationView;
+
+public class ConfirmDelete extends AppCompatActivity{
+
+    Button btn;
+    Button btn2;
+    private DrawerLayout drawer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_cart);
+        setContentView(R.layout.activity_confirm_delete);
 
-        button= (Button) findViewById(R.id.btn_cont_shopping);
-        button.setOnClickListener(new View.OnClickListener(){
+
+        btn = (Button)findViewById(R.id.btncondel);
+
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                openItemActivity();
+            public void onClick(View view) {
+
+                openDialog();
             }
         });
 
-        button1=(Button)findViewById(R.id.btn_placeOr_shopc);
-        button1.setOnClickListener(new View.OnClickListener() {
+        btn2 = (Button)findViewById(R.id.btncanceldel);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(shoppingCart.this,DeliveryForm.class);
+
+                Intent intent = new Intent(ConfirmDelete.this,ManageProfile.class);
                 startActivity(intent);
             }
         });
 
+    }
 
-        }
 
-    public void openItemActivity(){
-        Intent intent= new Intent(this,ItemActivity.class);
-        startActivity(intent);
+    public void openDialog(){
+
+        DeleteDialog confdel = new DeleteDialog();
+        confdel.show(getSupportFragmentManager(),"deleted");
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -54,27 +72,27 @@ public class shoppingCart extends AppCompatActivity {
         switch(item.getItemId()){
 
             case R.id.nav_home:
-                intent = new Intent(shoppingCart.this,getStarted.class);
+                intent = new Intent(ConfirmDelete.this,getStarted.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_profile:
-                intent = new Intent(shoppingCart.this,PersonalProfile.class);
+                intent = new Intent(ConfirmDelete.this,PersonalProfile.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_shopcart:
-                intent = new Intent(shoppingCart.this,shoppingCart.class);
+                intent = new Intent(ConfirmDelete.this,shoppingCart.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_orders:
-                intent = new Intent(shoppingCart.this,Orders.class);
+                intent = new Intent(ConfirmDelete.this,Orders.class);
                 startActivity(intent);
                 return true;
 
             case R.id.nav_message:
-                intent = new Intent(shoppingCart.this,Messages.class);
+                intent = new Intent(ConfirmDelete.this,Messages.class);
                 startActivity(intent);
                 return true;
 
@@ -83,4 +101,5 @@ public class shoppingCart extends AppCompatActivity {
 
         }
     }
+
 }

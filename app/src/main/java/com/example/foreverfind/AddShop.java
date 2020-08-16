@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -43,5 +46,47 @@ public class AddShop extends AppCompatActivity {
     public void openItems() {
         Intent intent = new Intent(this, ItemActivity.class);
         startActivity(intent);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.drawer_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent;
+        switch(item.getItemId()){
+
+            case R.id.nav_home:
+                intent = new Intent(AddShop.this,getStarted.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_profile:
+                intent = new Intent(AddShop.this,PersonalProfile.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_shopcart:
+                intent = new Intent(AddShop.this,shoppingCart.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_orders:
+                intent = new Intent(AddShop.this,Orders.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_message:
+                intent = new Intent(AddShop.this,Messages.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

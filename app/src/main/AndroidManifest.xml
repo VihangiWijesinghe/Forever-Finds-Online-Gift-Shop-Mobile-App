@@ -4,12 +4,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".orders02"></activity>
+        <activity android:name=".PersonalProfile"></activity>
+        <activity android:name=".PaymentSummary" />
+        <activity android:name=".PaymentMethod" />
+        <activity android:name=".PaymentConfirm" />
+        <activity android:name=".Orders" />
+        <activity android:name=".OrderConfirm" />
+        <activity android:name=".Messages" />
+        <activity android:name=".ManageProfile" />
+        <activity android:name=".ConfirmDelete" />
+        <activity android:name=".orders02" />
         <activity android:name=".summary" />
         <activity android:name=".DeliveryForm" />
         <activity android:name=".Edit" />

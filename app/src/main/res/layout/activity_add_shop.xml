@@ -8,7 +8,7 @@
     tools:context=".AddShop">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnDelCon"
         android:layout_width="86dp"
         android:layout_height="48dp"
         android:layout_marginStart="20dp"
@@ -69,10 +69,10 @@
         android:layout_height="31dp"
         android:outlineProvider="bounds"
         android:text="@string/txt_no_items"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnDelCon"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnDelCon" />
 
     <Button
         android:id="@+id/button2"
