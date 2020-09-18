@@ -11,10 +11,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="366dp"
         android:text="@string/register"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etPw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,40 +28,22 @@
         android:layout_width="149dp"
         android:layout_height="100dp"
         android:src="@drawable/logo2"
-        app:layout_constraintBottom_toBottomOf="@+id/btngetStart"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCreateAcc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.157" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/etPhone"
         android:layout_width="258dp"
         android:layout_height="47dp"
         android:ems="10"
+        android:hint="@string/txtreg_phone"
         android:inputType="textPersonName"
-        android:text="@string/txt_conpass"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#CACDDF"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="258dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/txtreg_phone"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#CACDDF"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="@color/hint_clr02"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,51 +53,33 @@
         app:layout_constraintVertical_bias="0.442" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/etEmail"
         android:layout_width="258dp"
         android:layout_height="47dp"
         android:ems="10"
+        android:hint="@string/txtreg_email"
         android:inputType="textPersonName"
-        android:text="@string/txtreg_email"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#CACDDF"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="@color/hint_clr02"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="258dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/txt_pwd"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#CACDDF"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/btngetStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.566" />
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="258dp"
         android:layout_height="47dp"
         android:ems="10"
+        android:hint="@string/name_logtxt"
         android:inputType="textPersonName"
-        android:text="@string/name_logtxt"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#CACDDF"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="@color/hint_clr02"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +89,7 @@
         app:layout_constraintVertical_bias="0.285" />
 
     <Button
-        android:id="@+id/btngetStart"
+        android:id="@+id/btnCreateAcc"
         android:layout_width="162dp"
         android:layout_height="43dp"
         android:layout_marginBottom="32dp"
@@ -137,4 +103,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="@string/txt_pass"
+        android:inputType="textPassword"
+        android:password="true"
+        app:layout_constraintBottom_toTopOf="@+id/etConPw"
+        app:layout_constraintEnd_toEndOf="@+id/etConPw"
+        app:layout_constraintStart_toStartOf="@+id/etConPw"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etConPw"
+        android:layout_width="251dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="113dp"
+        android:ems="10"
+        android:hint="@string/txt_conpass"
+        android:inputType="textPassword"
+        android:password="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPw" />
 </androidx.constraintlayout.widget.ConstraintLayout>

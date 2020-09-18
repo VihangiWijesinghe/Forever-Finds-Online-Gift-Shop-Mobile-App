@@ -7,4 +7,6 @@
     <color name="colorsub">#F17878</color>
     <color name="header_color">#bf265c</color>
     <color name="bg_color">#FFE1B8B8</color>
+    <color name="hint_clr">#998C8B</color>
+    <color name="hint_clr02">#A5A2A2</color>
 </resources>

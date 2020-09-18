@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "123861855863",
+    "firebase_url": "https://foreverfind-b4ad2.firebaseio.com",
+    "project_id": "foreverfind-b4ad2",
+    "storage_bucket": "foreverfind-b4ad2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123861855863:android:bf188097588958ca7f2072",
+        "android_client_info": {
+          "package_name": "com.example.foreverfind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123861855863-m4ljqs7qld0rccsd55mnh1rhm538q4k8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foreverfind",
+            "certificate_hash": "af318c01f0829d591198d17b6c018a9677556ae9"
+          }
+        },
+        {
+          "client_id": "123861855863-839fnr2u9i0smgh8n715t873frcaocbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_KRs-6Np20locUHFmj_uNRgYfEm-09a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123861855863-839fnr2u9i0smgh8n715t873frcaocbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
