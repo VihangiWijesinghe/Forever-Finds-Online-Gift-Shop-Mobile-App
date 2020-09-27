@@ -5,6 +5,11 @@
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
         android:title="@string/txt_home" />
+
+    <item
+        android:id="@+id/nav_items"
+        android:icon="@drawable/ic_orders"
+        android:title="@string/goitem" />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_profile"
@@ -18,6 +23,8 @@
         android:id="@+id/nav_orders"
         android:icon="@drawable/ic_orders"
         android:title="@string/txt_morder" />
+
+
 
     <item
         android:id="@+id/nav_message"

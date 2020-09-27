@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.foreverfind">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.foreverfindvihangi">
 
     <application
         android:allowBackup="true"
@@ -8,8 +9,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".stockdetails"></activity>
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".SelectItemType"></activity>
+        <activity android:name=".mainpage"></activity>
+        <activity android:name=".stockdetails" />
         <activity android:name=".Restock" />
         <activity android:name=".AdminPanel" />
         <activity android:name=".home" />
@@ -31,7 +35,7 @@
         <activity android:name=".shoppingCart" />
         <activity android:name=".ChocolateActivity" />
         <activity android:name=".CakeActivity" />
-        <activity android:name=".AddShop" />
+        <activity android:name=".AddShop"></activity>
         <activity android:name=".ItemActivity" />
         <activity android:name=".getStarted" />
         <activity

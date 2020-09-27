@@ -26,6 +26,7 @@
     <string name="txt_conpass">Confirm Password</string>
     <string name="txt_create">Create Account</string>
     <string name="txt_pass">Password</string>
+    <string name="goitem"> Categories</string>
 
     <string name="delivery_request_form">Delivery Request Form</string>
     <string name="receiver_full_name">Receiver full name:</string>

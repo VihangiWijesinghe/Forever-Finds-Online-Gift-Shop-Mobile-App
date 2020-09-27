@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "123861855863",
-    "firebase_url": "https://foreverfind-b4ad2.firebaseio.com",
-    "project_id": "foreverfind-b4ad2",
-    "storage_bucket": "foreverfind-b4ad2.appspot.com"
+    "project_number": "192571158313",
+    "firebase_url": "https://foreverfind-d661e.firebaseio.com",
+    "project_id": "foreverfind-d661e",
+    "storage_bucket": "foreverfind-d661e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:123861855863:android:bf188097588958ca7f2072",
+        "mobilesdk_app_id": "1:192571158313:android:43b8c5a42de03b7e4b9138",
         "android_client_info": {
           "package_name": "com.example.foreverfind"
         }
       },
       "oauth_client": [
         {
-          "client_id": "123861855863-m4ljqs7qld0rccsd55mnh1rhm538q4k8.apps.googleusercontent.com",
+          "client_id": "192571158313-s5nm31gh38faqga6sbnr5kk9p9cvggaa.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.foreverfind",
@@ -23,20 +23,78 @@
           }
         },
         {
-          "client_id": "123861855863-839fnr2u9i0smgh8n715t873frcaocbh.apps.googleusercontent.com",
+          "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD_KRs-6Np20locUHFmj_uNRgYfEm-09a0"
+          "current_key": "AIzaSyDvY9K_8Z6sc5nkPS440aTyaymmzJQi1kw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "123861855863-839fnr2u9i0smgh8n715t873frcaocbh.apps.googleusercontent.com",
+              "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192571158313:android:da130005d776df484b9138",
+        "android_client_info": {
+          "package_name": "com.example.foreverfindnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY9K_8Z6sc5nkPS440aTyaymmzJQi1kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192571158313:android:e4b12a8bfcb0e80a4b9138",
+        "android_client_info": {
+          "package_name": "com.example.foreverfindvihangi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY9K_8Z6sc5nkPS440aTyaymmzJQi1kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
