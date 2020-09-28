@@ -1,6 +1,6 @@
 package com.example.foreverfind.model;
 
-public class Orders {
+public class Order {
 
 
     String orderNo;
@@ -9,10 +9,10 @@ public class Orders {
     String ResPhone;
     Boolean status;
 
-    public Orders() {
+    public Order() {
     }
 
-    public Orders(String orderNo, String recName, String daddress, String resPhone, Boolean status) {
+    public Order(String orderNo, String recName, String daddress, String resPhone, Boolean status) {
         this.orderNo = orderNo;
         RecName = recName;
         Daddress = daddress;
