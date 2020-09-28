@@ -10,10 +10,7 @@
         android:id="@+id/nav_items"
         android:icon="@drawable/ic_orders"
         android:title="@string/goitem" />
-    <item
-        android:id="@+id/nav_items"
-        android:icon="@drawable/ic_orders"
-        android:title="Categories" />
+
 
     <item
         android:id="@+id/nav_profile"
