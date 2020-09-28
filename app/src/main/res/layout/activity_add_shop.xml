@@ -47,12 +47,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/product_des_adds"
-        android:text="Product Price"
-        android:textSize="20dp"
-        android:textColor="#0f0c0c"
+        android:layout_marginTop="7dp"
         android:gravity="center"
-        android:layout_marginTop="10dp"
-        />
+        android:text="Product Price"
+        android:textColor="#0f0c0c"
+        android:textSize="20dp" />
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
        android:id="@+id/number_btn"
@@ -88,7 +87,6 @@
         android:textSize="18sp">
 
     </Button>
-
 
 
 </RelativeLayout>

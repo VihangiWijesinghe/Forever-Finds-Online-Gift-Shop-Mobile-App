@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#B8E4B9"
     android:layout_height="match_parent"
-    tools:context="com.example.foreverfindvihangi.SelectItemType">
+    tools:context="com.example.foreverfind.SelectItemType">
 
     <ImageView
         android:id="@+id/flow_icon"

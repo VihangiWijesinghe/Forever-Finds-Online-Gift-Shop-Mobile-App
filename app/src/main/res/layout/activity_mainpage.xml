@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B8E4B9"
-    tools:context="com.example.foreverfindvihangi.mainpage">
+    tools:context="com.example.foreverfind.mainpage">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_showShop2"
