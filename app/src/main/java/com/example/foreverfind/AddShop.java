@@ -1,5 +1,6 @@
 package com.example.foreverfind;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,38 +10,148 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.example.foreverfind.model.Products;
+import com.example.foreverfind.sessions.SessionManagement;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+
 public class AddShop extends AppCompatActivity {
-    private Button button;
+
+    private Button addToCartBtn;
+    private ImageView productImage;
+    private ElegantNumberButton numberButton;
+    private TextView proPrice,proDes,proName;
+    private String productID = "1";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_shop);
 
-        button = (Button) findViewById(R.id.btn_addcart);
-        button.setOnClickListener(new View.OnClickListener() {
+         productID = getIntent().getStringExtra("pid");
+
+         if(productID == null){
+             Toast.makeText(this, "pid is null", Toast.LENGTH_SHORT).show();
+         }
+
+         else{
+             getProductDetails(productID);
+         }
+
+      addToCartBtn = (Button)findViewById(R.id.btn_addProduct_cart);
+      productImage = (ImageView)findViewById(R.id.product_image_adds);
+      numberButton = (ElegantNumberButton)findViewById(R.id.number_btn);
+      proPrice = (TextView)findViewById(R.id.product_price_adds);
+      proDes = (TextView)findViewById(R.id.product_des_adds);
+      proName = (TextView)findViewById(R.id.product_name_adds);
+
+      addToCartBtn.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+
+
+              addingToCartList();
+
+
+          }
+      });
+
+
+
+    }
+
+    private void addingToCartList() {
+
+        String saveCurrentTime, saveCurrentDate;
+
+        Calendar calForDate = Calendar.getInstance();
+
+        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+        saveCurrentDate = currentDate.format(calForDate.getTime());
+
+        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+        saveCurrentTime= currentTime.format(calForDate.getTime());
+
+        SessionManagement sm = new SessionManagement(AddShop.this);
+        String phone = sm.getUser();
+
+
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+
+        final HashMap<String,Object> cartMap = new HashMap<>();
+            cartMap.put("pid",productID);
+            cartMap.put("pname",proName.getText().toString());
+
+            cartMap.put("price",proPrice.getText().toString());
+            cartMap.put("date",saveCurrentDate);
+            cartMap.put("time",saveCurrentTime);
+            cartMap.put("quantity",numberButton.getNumber());
+            cartMap.put("pid",productID);
+
+         cartListRef.child(phone).child("ProductItems").child(productID).updateChildren(cartMap)
+         .addOnCompleteListener(new OnCompleteListener<Void>() {
+             @Override
+             public void onComplete(@NonNull Task<Void> task) {
+
+                 if(task.isSuccessful()){
+                     Intent intent= new Intent(AddShop.this,shoppingCart.class);
+                     Toast.makeText(AddShop.this, "Added To Cart List..", Toast.LENGTH_SHORT).show();
+                     startActivity(intent);
+                 }
+             }
+         })
+                ;
+
+    }
+
+    private void getProductDetails(String productID) {
+
+        DatabaseReference productsRefer = FirebaseDatabase.getInstance().getReference().child("Products");
+
+        productsRefer.child(productID).addValueEventListener(new ValueEventListener() {
+
             @Override
-            public void onClick(View v) {
-                openShopcartActivity();
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    Products products = dataSnapshot.getValue(Products.class);
+
+                    proName.setText(products.getPname());
+                    proDes.setText(products.getDescription());
+                    proPrice.setText(products.getPrice());
+                    Picasso.get().load(products.getImage()).into(productImage);
+                }
             }
 
-        });
-
-        button = (Button) findViewById(R.id.btn_backItem);
-        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                openItems();
-            }
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
         });
     }
 
+
     public void openShopcartActivity() {
+        Toast.makeText(getBaseContext(), "Item is added to the cart!" , Toast.LENGTH_SHORT ).show();
         Intent intent = new Intent(this, shoppingCart.class);
         startActivity(intent);
-        Toast.makeText(getBaseContext(), "Item is added to the cart!" , Toast.LENGTH_SHORT ).show();
+
     }
 
     public void openItems() {
@@ -81,6 +192,11 @@ public class AddShop extends AppCompatActivity {
 
             case R.id.nav_message:
                 intent = new Intent(AddShop.this,Messages.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_items:
+                intent = new Intent(AddShop.this,SelectItemType.class);
                 startActivity(intent);
                 return true;
 

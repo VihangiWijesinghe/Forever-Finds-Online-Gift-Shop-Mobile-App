@@ -10,8 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.foreverfind.sessions.SessionManagement;
-
 
 public class getStarted extends AppCompatActivity {
     private Button button;
@@ -20,20 +18,17 @@ public class getStarted extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
 
-        button= findViewById(R.id.button14);
+        button= (Button) findViewById(R.id.button14);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                openItemActivity();
+                Intent intent = new Intent(getStarted.this,SelectItemType.class);
+                startActivity(intent);
             }
         });
     }
 
 
-    public void openItemActivity(){
-        Intent intent= new Intent(this,ItemActivity.class);
-        startActivity(intent);
-    }
 
     public boolean onCreateOptionsMenu(Menu menu){
 
@@ -68,6 +63,11 @@ public class getStarted extends AppCompatActivity {
 
             case R.id.nav_message:
                 intent = new Intent(getStarted.this,Messages.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_items:
+                intent = new Intent(getStarted.this,SelectItemType.class);
                 startActivity(intent);
                 return true;
 

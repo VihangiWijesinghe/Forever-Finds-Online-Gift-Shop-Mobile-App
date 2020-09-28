@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFE1B8B8"
+    android:background="#B8E4B9"
     tools:context=".DeliveryForm">
 
     <TextView
@@ -22,9 +22,9 @@
         app:layout_constraintVertical_bias="0.093" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="288dp"
-        android:layout_height="71dp"
+        android:id="@+id/res_name"
+        android:layout_width="290dp"
+        android:layout_height="61dp"
         android:ems="10"
         android:hint="@string/receiver_full_name"
         android:importantForAutofill="no"
@@ -37,47 +37,47 @@
         app:layout_constraintVertical_bias="0.259" />
 
     <EditText
-        android:id="@+id/etPhone"
+        android:id="@+id/delPhone"
         android:layout_width="288dp"
-        android:layout_height="71dp"
+        android:layout_height="63dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/delivery_address"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="288dp"
-        android:layout_height="71dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/mobile_number"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.424" />
 
     <Button
-        android:id="@+id/btnDelCon"
-        android:layout_width="268dp"
-        android:layout_height="62dp"
+        android:id="@+id/btn_confirmOrder"
+        android:layout_width="333dp"
+        android:layout_height="48dp"
         android:background="#bb285c"
         android:text="@string/submit"
+        android:textColor="#ffff"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.904" />
+
+    <EditText
+        android:id="@+id/resmobile"
+        android:layout_width="287dp"
+        android:layout_height="64dp"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

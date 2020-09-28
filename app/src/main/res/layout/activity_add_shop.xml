@@ -1,133 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorback"
+    android:background="#B8E4B9"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddShop">
 
-    <Button
-        android:id="@+id/btnDelCon"
-        android:layout_width="86dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#bb285c"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="238dp"
-        android:layout_height="142dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/product_image_adds"
+        android:layout_width="184dp"
+        android:layout_height="159dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
         app:srcCompat="@drawable/itm" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="211dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/txt_ItemName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        android:id="@+id/product_name_adds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_image_adds"
+        android:text="Product Name"
+        android:textSize="25dp"
+       android:textColor="#0f0c0c"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+
+        />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="200dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/txt_des"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:id="@+id/product_des_adds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name_adds"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="#0f0c0c"
+        android:text="Product Description"
+        android:textSize="20dp"
+        />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/product_price_adds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_des_adds"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="Product Price"
+        android:textColor="#0f0c0c"
+        android:textSize="20dp" />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+       android:id="@+id/number_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/txt_qty"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
+        android:elevation="6dp"
+        app:finalNumber="5"
+        app:initialNumber="1"
+        app:textSize="10dp"
+        app:backGroundColor="@color/colorAccent"
+        android:layout_below="@+id/product_price_adds"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        >
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="145dp"
-        android:layout_height="31dp"
-        android:outlineProvider="bounds"
-        android:text="@string/txt_no_items"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnDelCon"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnDelCon" />
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="82dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="28dp"
-        android:backgroundTint="#bb285c"
-        android:text="+"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="66dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="84dp"
-        android:text="@string/txt_tot"
-        app:layout_constraintBottom_toTopOf="@+id/btn_backItem"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="117dp"
-        android:layout_height="23dp"
-        android:layout_marginEnd="52dp"
-        android:text="@string/tot_Value"
-        android:background="#FFE1B8B8"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn_backItem"
-        android:layout_width="113dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="104dp"
-        android:backgroundTint="#bb285c"
-        android:foregroundTint="@android:color/background_dark"
-        android:text="Items"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_addcart"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_addProduct_cart"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:backgroundTint="#bb285c"
-        android:text="Add To Cart"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_backItem"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="6dp"
+        android:text="ADD TO CART"
+        android:textColor="#ffff"
+        android:textSize="18sp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </Button>
+
+
+</RelativeLayout>

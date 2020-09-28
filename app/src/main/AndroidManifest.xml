@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.foreverfind">
 
     <application
@@ -8,38 +9,40 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ChangePassword"></activity>
-        <activity android:name=".stockdetails" />
-        <activity android:name=".Restock" />
-        <activity android:name=".AdminPanel" />
-        <activity android:name=".home" />
-        <activity android:name=".add" />
-        <activity android:name=".PersonalProfile" />
-        <activity android:name=".PaymentSummary" />
-        <activity android:name=".PaymentMethod" />
-        <activity android:name=".PaymentConfirm" />
-        <activity android:name=".Orders" />
-        <activity android:name=".OrderConfirm" />
-        <activity android:name=".Messages" />
-        <activity android:name=".ManageProfile" />
-        <activity android:name=".ConfirmDelete" />
-        <activity android:name=".orders02" />
-        <activity android:name=".summary" />
-        <activity android:name=".DeliveryForm" />
-        <activity android:name=".Edit" />
-        <activity android:name=".ToysActivity" />
-        <activity android:name=".shoppingCart" />
-        <activity android:name=".ChocolateActivity" />
-        <activity android:name=".CakeActivity" />
-        <activity android:name=".AddShop" />
-        <activity android:name=".ItemActivity" />
-        <activity android:name=".getStarted" />
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name="com.example.foreverfind.SelectItemType"></activity>
+        <activity android:name="com.example.foreverfind.mainpage"></activity>
+        <activity android:name="com.example.foreverfind.stockdetails" />
+        <activity android:name="com.example.foreverfind.Restock" />
+        <activity android:name="com.example.foreverfind.AdminPanel" />
+        <activity android:name="com.example.foreverfind.home" />
+        <activity android:name="com.example.foreverfind.add" />
+        <activity android:name="com.example.foreverfind.PersonalProfile" />
+        <activity android:name="com.example.foreverfind.PaymentSummary" />
+        <activity android:name="com.example.foreverfind.PaymentMethod" />
+        <activity android:name="com.example.foreverfind.PaymentConfirm" />
+        <activity android:name="com.example.foreverfind.Orders" />
+        <activity android:name="com.example.foreverfind.OrderConfirm" />
+        <activity android:name="com.example.foreverfind.Messages" />
+        <activity android:name="com.example.foreverfind.ManageProfile" />
+        <activity android:name="com.example.foreverfind.ConfirmDelete" />
+        <activity android:name="com.example.foreverfind.orders02" />
+        <activity android:name="com.example.foreverfind.summary" />
+        <activity android:name="com.example.foreverfind.DeliveryForm" />
+        <activity android:name="com.example.foreverfind.Edit" />
+        <activity android:name="com.example.foreverfind.ToysActivity" />
+        <activity android:name="com.example.foreverfind.shoppingCart" />
+        <activity android:name="com.example.foreverfind.ChocolateActivity" />
+        <activity android:name="com.example.foreverfind.CakeActivity" />
+        <activity android:name="com.example.foreverfind.AddShop"></activity>
+        <activity android:name="com.example.foreverfind.ItemActivity" />
+        <activity android:name="com.example.foreverfind.getStarted" />
         <activity
-            android:name=".Register"
+            android:name="com.example.foreverfind.Register"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".Login"
+            android:name="com.example.foreverfind.Login"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

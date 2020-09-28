@@ -19,13 +19,8 @@ public class ItemActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
 
-        button= (Button) findViewById(R.id.btn_Item_01);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openAddShopActivity();
-            }
-        });
+       // button= (Button) findViewById(R.id.btn_Item_01);
+
     }
 
     public void openAddShopActivity(){

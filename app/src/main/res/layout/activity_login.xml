@@ -8,24 +8,6 @@
     tools:context=".Login">
 
 
-    <EditText
-        android:id="@+id/etPhone"
-        android:layout_width="258dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="@string/txtreg_phone"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#CACDDF"
-        android:textColorHint="@color/hint_clr02"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="263dp"
@@ -82,4 +64,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.931" />
+
+    <EditText
+        android:id="@+id/delPhone"
+        android:layout_width="262dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="@string/txtreg_phone"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/hint_clr02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
 </androidx.constraintlayout.widget.ConstraintLayout>
