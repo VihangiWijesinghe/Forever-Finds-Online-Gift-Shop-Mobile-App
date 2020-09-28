@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etAddressUp"
+        android:layout_width="242dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="196dp"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="textEmailAddress"
+        android:textColor="#292F50"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etNameProfup"
+        android:layout_width="242dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="@string/name_logtxt"
+        android:inputType="textEmailAddress"
+        android:textColor="#292F50"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etEmailUp"
+        android:layout_width="242dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        android:ems="10"
+        android:hint="@string/txtreg_email"
+        android:inputType="textEmailAddress"
+        android:textColor="#292F50"
+        android:textSize="18sp" />
+
+</RelativeLayout>

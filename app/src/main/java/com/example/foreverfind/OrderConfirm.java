@@ -45,12 +45,21 @@ public class OrderConfirm extends AppCompatActivity{
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(OrderConfirm.this,getStarted.class);
+        startActivity(intent);
+
+    }
+
     public boolean onCreateOptionsMenu(Menu menu){
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.drawer_menu,menu);
         return true;
     }
+
 
     public boolean onOptionsItemSelected(MenuItem item){
         Intent intent;

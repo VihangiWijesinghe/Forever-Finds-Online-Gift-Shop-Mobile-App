@@ -13,17 +13,20 @@ import android.widget.Button;
 public class summary extends AppCompatActivity {
 
     Button btn;
+    String val;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
-        btn = (Button)findViewById(R.id.btnDelCon);
+        val = "2850";
+        btn = findViewById(R.id.btnDelCon);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(summary.this,PaymentSummary.class);
+                intent.putExtra("subtot",val);
                 startActivity(intent);
             }
         });

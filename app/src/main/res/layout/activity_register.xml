@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.566" />
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etHName"
         android:layout_width="258dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -106,29 +106,31 @@
 
     <EditText
         android:id="@+id/etPw"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="258dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:hint="@string/txt_pass"
         android:inputType="textPassword"
         android:password="true"
-        app:layout_constraintBottom_toTopOf="@+id/etConPw"
-        app:layout_constraintEnd_toEndOf="@+id/etConPw"
-        app:layout_constraintStart_toStartOf="@+id/etConPw"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
 
     <EditText
         android:id="@+id/etConPw"
-        android:layout_width="251dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="113dp"
+        android:layout_width="255dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:hint="@string/txt_conpass"
         android:inputType="textPassword"
         android:password="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPw" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
 </androidx.constraintlayout.widget.ConstraintLayout>

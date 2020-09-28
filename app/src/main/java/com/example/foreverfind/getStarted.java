@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.foreverfind.sessions.SessionManagement;
+
 
 public class getStarted extends AppCompatActivity {
     private Button button;
@@ -18,7 +20,7 @@ public class getStarted extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
 
-        button= (Button) findViewById(R.id.button14);
+        button= findViewById(R.id.button14);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -26,6 +28,7 @@ public class getStarted extends AppCompatActivity {
             }
         });
     }
+
 
     public void openItemActivity(){
         Intent intent= new Intent(this,ItemActivity.class);

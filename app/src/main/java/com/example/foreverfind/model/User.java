@@ -51,7 +51,7 @@ public class User {
         this.address = address;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 

@@ -35,42 +35,60 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
-        createAc =findViewById(R.id.btnSignup);
-       login=findViewById(R.id.btnLog);
-       phone = findViewById(R.id.etPhone);
-       password = findViewById(R.id.etPassword);
-        loadingBar = new ProgressDialog(this);
-        createAc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+       /* SessionManagement sm = new SessionManagement(Login.this);
+        int phone1 = sm.getSession();
 
-                Intent intent = new Intent(Login.this,Register.class);
-                startActivity(intent);
-            }
-        });
+        if(phone1 != -1){
+            Intent intent= new Intent(Login.this,getStarted.class);
+            startActivity(intent);
+        }
+
+        else {*/
+            setContentView(R.layout.activity_login);
 
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LoginUser();
+            createAc = findViewById(R.id.btnSignup);
+            login = findViewById(R.id.btnLog);
+            phone = findViewById(R.id.etPhone);
+            password = findViewById(R.id.etPassword);
+            loadingBar = new ProgressDialog(this);
 
-            }
-        });
+            createAc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-    }
+                    Intent intent = new Intent(Login.this, Register.class);
+                    startActivity(intent);
+                }
+            });
+
+
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    LoginUser();
+
+                }
+            });
+        }
 
     @Override
     protected void onStart() {
         super.onStart();
         SessionManagement sm = new SessionManagement(Login.this);
-        int phone = sm.getSession();
+        String phone = sm.getSession();
 
-        if(phone != -1){
-            Intent intent= new Intent(Login.this,getStarted.class);
-            startActivity(intent);
+        if(!phone.equals("empty")){
+            if(!phone.equals("admin")) {
+                Intent intent = new Intent(Login.this, getStarted.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(Login.this, home.class);
+                startActivity(intent);
+            }
         }
 
     }
@@ -111,30 +129,46 @@ public class Login extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.child(parentDBName).child(phone).exists()){
+                if(dataSnapshot.child(parentDBName).child(phone).exists()) {
 
-                    User u = dataSnapshot.child(parentDBName).child(phone).getValue(User.class);
+                    if (dataSnapshot.child(parentDBName).child(phone).child("type").exists()) {
 
+                        SessionManagement sm = new SessionManagement(Login.this);
+                        sm.saveSession("admin");
 
-                        if(u.getPassword().equals(password)){
-                            Toast.makeText(Login.this, "Logged In Successfully..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Logged In Successfully..", Toast.LENGTH_SHORT).show();
+                        loadingBar.dismiss();
+                        Intent intent = new Intent(Login.this, home.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+
+                    }else {
+
+                        User u = dataSnapshot.child(parentDBName).child(phone).getValue(User.class);
+                        if (u.getStatus() == true) {
+
+                            if (u.getPassword().equals(password)) {
+                                SessionManagement sm = new SessionManagement(Login.this);
+                                sm.saveSession(phone);
+
+                                Toast.makeText(Login.this, "Logged In Successfully..", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                                Intent intent = new Intent(Login.this, getStarted.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(Login.this, "Your Password Is Incorrect ", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+                            }
+                        } else {
+                            Toast.makeText(Login.this, "This " + phone + " Does Not Exist", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
-
-                            SessionManagement sm = new SessionManagement(Login.this);
-                            sm.saveSession(u);
-
-                            Intent intent= new Intent(Login.this,getStarted.class);
-                            startActivity(intent);
                         }
 
-                        else {
-                            Toast.makeText(Login.this, "Your Password Is Incorrent ", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
-                        }
                     }
 
-
-
+                }
                 else{
                     Toast.makeText(Login.this, "This " + phone +" Does Not Exist", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
