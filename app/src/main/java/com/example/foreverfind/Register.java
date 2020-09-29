@@ -38,7 +38,7 @@ public class Register extends AppCompatActivity {
 
 
         createAcbtn=findViewById(R.id.btnCreateAcc);
-        Inputname =findViewById(R.id.etName);
+        Inputname =findViewById(R.id.etHName);
         Inputemail =findViewById(R.id.etEmail);
         Inputpw = findViewById(R.id.weight);
         Inputphone= findViewById(R.id.code);
@@ -71,9 +71,8 @@ public class Register extends AppCompatActivity {
         String pw = ui.getPassword();
         String phone = ui.getPhone();
         String email = ui.getEmail();
-
-
-
+        String addr = ui.getAddress();
+        boolean status = ui.getStatus();
 
         if(TextUtils.isEmpty(name)){
             Toast.makeText(this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
@@ -103,12 +102,12 @@ public class Register extends AppCompatActivity {
 
             loadingBar.show();
 
-            Validatephone(name,phone,pw,conpw,email);
+            Validatephone(name,phone,pw,conpw,email,addr,status);
         }
 
     }
 
-    private void Validatephone(final String name, final String phone, final String pw, final String conpw,final String email) {
+    private void Validatephone(final String name, final String phone, final String pw, final String conpw,final String email,final String address,final boolean status) {
 
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
@@ -117,7 +116,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if (!(dataSnapshot.child("Users").child(phone.toString()).exists())){
+                if (!(dataSnapshot.child("Users").child(phone).child("status").child("true").exists())){
 
                     if(pw.equals(conpw) ) {
                             HashMap<String, Object> userdataMap = new HashMap<>();
@@ -125,8 +124,10 @@ public class Register extends AppCompatActivity {
                             userdataMap.put("name", name);
                             userdataMap.put("password", pw);
                             userdataMap.put("email", email);
+                            userdataMap.put("address",address);
+                            userdataMap.put("status",status);
 
-                            RootRef.child("Users").child(phone.toString()).updateChildren(userdataMap)
+                            RootRef.child("Users").child(phone).updateChildren(userdataMap)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
@@ -142,11 +143,11 @@ public class Register extends AppCompatActivity {
                                                 u.setEmail(email);
 
                                                 SessionManagement sm = new SessionManagement(Register.this);
-                                                sm.saveSession(u);
+                                                sm.saveSession(phone);
+                                                sm.save("switch_on");
 
                                                 Intent intent= new Intent(Register.this,getStarted.class);
                                                 startActivity(intent);
-
 
                                             }
 

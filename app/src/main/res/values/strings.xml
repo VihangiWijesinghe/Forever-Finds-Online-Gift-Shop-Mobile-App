@@ -26,6 +26,7 @@
     <string name="txt_conpass">Confirm Password</string>
     <string name="txt_create">Create Account</string>
     <string name="txt_pass">Password</string>
+    <string name="goitem"> Categories</string>
 
     <string name="delivery_request_form">Delivery Request Form</string>
     <string name="receiver_full_name">Receiver full name:</string>
@@ -97,12 +98,12 @@
     <string name="txt_pwd">Password</string>
     <string name="txt_ClearHistory">Clear History</string>
     <string name="txt_deleteAcc">Delete Account</string>
-    <string name="txt_not">Send Notifications</string>
+    <string name="txt_not">Send Promotions</string>
     <string name="txt_confdel">You are about to delete your account</string>
     <string name="txt_cancel">Cancel</string>
     <string name="txt_confm">Confirm</string>
     <string name="txt_Orderno1">Order Number: 12346</string>
-    <string name="txt_Orderno1date">Date: 12/02/2020</string>
+    <string name="txt_Orderno1date">Date</string>
     <string name="txt_Orderno2">Order Number: 12456</string>
     <string name="txt_Orderno2date">Date: 22/06/2020</string>
     <string name="txt_OrderDel">Delivered</string>
@@ -112,6 +113,7 @@
     <string name="txt_msgs">Messages and notifications</string>
     <string name="txt_topic">New imported Chocolates Promo</string>
     <string name="txt_text">Enjoy best chocolates at the best price</string>
+    <string name="rfname">Receiver: </string>
 
     <string name="add_item">Add Item</string>
     <string name="re_stock_item">Re-Stock Item</string>
@@ -126,15 +128,15 @@
     <string name="price_rs_800">Price : </string>
     <string name="weight_1kg">Weight : </string>
     <string name="quantity_10">Quantity : </string>
-    <string name="hintq">Enter the item quantity </string>
-    <string name="hintitem">"Enter the item code "</string>
-    <string name="hintp">Enter the item price</string>
-    <string name="hintw">Enter the item weight</string>
-    <string name="hintadd">ADD</string>
-    <string name="hintqu">Enter the quantity</string>
-    <string name="itcode">Enter the item code</string>
-    <string name="hprice">Enter the item price</string>
-    <string name="readd">ADD</string>
+    <string name="newPhone">Enter New Phone Number</string>
+    <string name="curPass">Current Password</string>
+    <string name="npass">New Password</string>
+    <string name="cnPass">Confirm New Password</string>
+    <string name="address">Set Address</string>
+    <string name="updetails">Change Details</string>
+    <string name="rs">"Rs "</string>
+    <string name="txt_hname">Enter Name</string>
+    <string name="txt_yy">YYYY</string>
 
     <string-array name="items">
 

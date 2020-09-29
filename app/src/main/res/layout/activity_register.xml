@@ -16,7 +16,7 @@
         android:text="@string/register"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/weight"
+        app:layout_constraintBottom_toTopOf="@+id/etPw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,24 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.157" />
-
-    <EditText
-        android:id="@+id/code"
-        android:layout_width="258dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="@string/txtreg_phone"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#CACDDF"
-        android:textColorHint="@color/hint_clr02"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -105,30 +87,47 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/weight"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="26dp"
+        android:id="@+id/etPw"
+        android:layout_width="252dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:hint="@string/txt_pass"
         android:inputType="textPassword"
         android:password="true"
-        app:layout_constraintBottom_toTopOf="@+id/etConPw"
-        app:layout_constraintEnd_toEndOf="@+id/etConPw"
-        app:layout_constraintStart_toStartOf="@+id/etConPw"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683" />
 
     <EditText
         android:id="@+id/etConPw"
-        android:layout_width="251dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="113dp"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
         android:ems="10"
         android:hint="@string/txt_conpass"
         android:inputType="textPassword"
         android:password="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weight" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <EditText
+        android:id="@+id/etPhonenew"
+        android:layout_width="256dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="@string/txtreg_phone"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/hint_clr02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
 </androidx.constraintlayout.widget.ConstraintLayout>

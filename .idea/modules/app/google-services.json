@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "192571158313",
+    "firebase_url": "https://foreverfind-d661e.firebaseio.com",
+    "project_id": "foreverfind-d661e",
+    "storage_bucket": "foreverfind-d661e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192571158313:android:43b8c5a42de03b7e4b9138",
+        "android_client_info": {
+          "package_name": "com.example.foreverfind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192571158313-s5nm31gh38faqga6sbnr5kk9p9cvggaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foreverfind",
+            "certificate_hash": "af318c01f0829d591198d17b6c018a9677556ae9"
+          }
+        },
+        {
+          "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY9K_8Z6sc5nkPS440aTyaymmzJQi1kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192571158313:android:da130005d776df484b9138",
+        "android_client_info": {
+          "package_name": "com.example.foreverfindnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY9K_8Z6sc5nkPS440aTyaymmzJQi1kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192571158313:android:e4b12a8bfcb0e80a4b9138",
+        "android_client_info": {
+          "package_name": "com.example.foreverfindvihangi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY9K_8Z6sc5nkPS440aTyaymmzJQi1kw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192571158313-4m25aippsdfthmpvtulauimiafp0jg94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,185 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorback"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    android:backgroundTint="#179F93"
     tools:context=".ItemActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#E91E63"
-        android:drawableTint="#F4F0F0"
-        android:foregroundTint="@android:color/background_dark"
-        android:text="@string/txtItemf"
-        android:textSize="18sp"
-        app:drawableTint="@android:color/background_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mainItem" />
-
-    <Button
-        android:id="@+id/btn_mainItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:onClick="showPopup"
-        android:text="Items"
-        tools:layout_editor_absoluteY="4dp" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="129dp"
-        android:layout_height="129dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:background="@color/colorback"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/boq5" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="113dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="84dp"
-        android:height="@dimen/item_btn_height"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Pink Rose 3500Rs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addbtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="129dp"
-        android:layout_height="129dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/addbtn"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:srcCompat="@drawable/boq13" />
-
-    <Button
-        android:id="@+id/addbtn"
-        android:layout_width="112dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="88dp"
-        android:width="@dimen/item_btn_width"
-        android:height="@dimen/item_btn_height"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Red Rose 2000Rs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="129dp"
-        android:layout_height="129dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:srcCompat="@drawable/white" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="113dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="84dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Pure white 4000Rs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addbtn" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="399dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="124dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="10dp">
+        >
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="129dp"
-            android:layout_height="129dp"
-            app:srcCompat="@drawable/boq6" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="125dp"
-            android:layout_height="124dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="4dp"
-            app:srcCompat="@drawable/boq4" />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/rImageView"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:padding="2dp">/</ImageView>
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="118dp"
-            android:layout_height="126dp"
-            android:layout_marginBottom="4dp"
-            app:srcCompat="@drawable/boq10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="#ffff"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/itemdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="#ffff"
+
+                android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/itemprice"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="#ffff"
+                android:textSize="18sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Rs"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_Item_01"
-        android:layout_width="121dp"
-        android:layout_height="65dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="cream flower boquet 1500Rs"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
-        android:id="@+id/btn_Item_02"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="120dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:drawableTint="@android:color/background_dark"
-        android:fontFamily="sans-serif-medium"
-        android:foregroundTint="@color/colorAccent"
-        android:text="rose flower boquet 2500Rs"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btn_Item_03"
-        android:layout_width="117dp"
-        android:layout_height="68dp"
-        android:layout_marginBottom="256dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Multi colour flower boquet 3000Rs"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.935"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

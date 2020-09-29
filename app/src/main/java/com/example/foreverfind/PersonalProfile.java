@@ -9,8 +9,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 
+import com.example.foreverfind.sessions.SessionManagement;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
@@ -61,6 +61,11 @@ public class PersonalProfile extends AppCompatActivity {
 
     }
 
+    protected void onStart() {
+        super.onStart();
+
+
+    }
     public boolean onCreateOptionsMenu(Menu menu){
 
         MenuInflater inflater = getMenuInflater();

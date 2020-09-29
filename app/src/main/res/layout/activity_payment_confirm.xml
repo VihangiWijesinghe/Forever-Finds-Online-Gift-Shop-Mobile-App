@@ -9,15 +9,15 @@
 
     <Button
         android:id="@+id/btncon"
-        android:layout_width="149dp"
-        android:layout_height="62dp"
+        android:layout_width="166dp"
+        android:layout_height="66dp"
         android:backgroundTint="#6AAE1B"
         android:text="@string/txt_confirm"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.951" />
@@ -26,29 +26,29 @@
         android:id="@+id/tvBnk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_bank"
+        android:text="@string/txt_hname"
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/etBnk"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etHName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/etBnk"
-        android:layout_width="213dp"
-        android:layout_height="48dp"
+        android:id="@+id/etHName"
+        android:layout_width="219dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Commercial Bank"
         android:textColor="#25306C"
-        android:textColorLink="@color/cardview_light_background"
+        android:textColorHighlight="#52DFF1"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <TextView
         android:id="@+id/tvCard"
@@ -59,10 +59,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.274" />
 
     <TextView
         android:id="@+id/tvCvv"
@@ -73,10 +73,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <EditText
         android:id="@+id/etcvv"
@@ -84,11 +84,13 @@
         android:layout_height="42dp"
         android:ems="10"
         android:inputType="number"
-        android:text="003"
+        android:maxLength="3"
         android:textColor="#25306C"
+        android:textColorHighlight="#52DFF1"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/etMonth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -97,15 +99,15 @@
         android:layout_height="47dp"
         android:ems="10"
         android:inputType="number"
-        android:text="8757875678765765"
         android:textColor="#25306C"
+        android:textColorHighlight="#52DFF1"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintVertical_bias="0.327" />
 
     <TextView
         android:id="@+id/tvExpiry"
@@ -119,38 +121,42 @@
         app:layout_constraintHorizontal_bias="0.856"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <EditText
         android:id="@+id/etMonth"
-        android:layout_width="46dp"
-        android:layout_height="40dp"
+        android:layout_width="61dp"
+        android:layout_height="46dp"
+        android:cursorVisible="false"
         android:ems="10"
         android:hint="@string/txt_mm"
         android:inputType="number"
-        android:text="12"
+        android:maxLength="2"
         android:textColor="@color/design_default_color_primary_dark"
+        android:textColorHighlight="#52DFF1"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBaseline_toBaselineOf="@+id/etYY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etYY"
-        android:layout_width="46dp"
-        android:layout_height="40dp"
+        android:layout_width="71dp"
+        android:layout_height="44dp"
         android:ems="10"
-        android:hint="@string/txt_mm"
+        android:hint="@string/txt_yy"
         android:inputType="number"
-        android:text="23"
+        android:maxLength="4"
         android:textColor="@color/design_default_color_primary_dark"
+        android:textColorHighlight="#52DFF1"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        app:layout_constraintVertical_bias="0.583" />
 
     <TextView
         android:id="@+id/tvAmountPay"
@@ -161,14 +167,13 @@
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvTotalPay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvTotalPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_numamount"
         android:textColor="#4A6020"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -176,7 +181,7 @@
         app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintVertical_bias="0.751" />
 
     <TextView
         android:id="@+id/tvPayment"
@@ -187,9 +192,21 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.028" />
+
+    <ImageView
+        android:id="@+id/imgvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,15 +22,13 @@ public class getStarted extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                openItemActivity();
+                Intent intent = new Intent(getStarted.this,SelectItemType.class);
+                startActivity(intent);
             }
         });
     }
 
-    public void openItemActivity(){
-        Intent intent= new Intent(this,ItemActivity.class);
-        startActivity(intent);
-    }
+
 
     public boolean onCreateOptionsMenu(Menu menu){
 
@@ -65,6 +63,11 @@ public class getStarted extends AppCompatActivity {
 
             case R.id.nav_message:
                 intent = new Intent(getStarted.this,Messages.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.nav_items:
+                intent = new Intent(getStarted.this,SelectItemType.class);
                 startActivity(intent);
                 return true;
 

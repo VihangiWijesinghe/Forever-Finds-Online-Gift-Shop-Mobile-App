@@ -1,6 +1,5 @@
 package com.example.foreverfind;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -17,6 +16,7 @@ public class PaymentMethod extends AppCompatActivity{
     Button button1;
     Button button2;
     private DrawerLayout drawer;
+    String famount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +25,15 @@ public class PaymentMethod extends AppCompatActivity{
         button1=(Button)findViewById(R.id.btnDebit);
         button2=(Button)findViewById(R.id.btnCredit);
 
+        famount=getIntent().getStringExtra("ftot");
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(PaymentMethod.this,PaymentConfirm.class);
+                intent.putExtra("iamount",famount);
+                intent.putExtra("card","debit");
                 startActivity(intent);
             }
         });
@@ -38,6 +43,8 @@ public class PaymentMethod extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PaymentMethod.this,PaymentConfirm.class);
+                intent.putExtra("iamount",famount);
+                intent.putExtra("card","credit");
                 startActivity(intent);
             }
         });
