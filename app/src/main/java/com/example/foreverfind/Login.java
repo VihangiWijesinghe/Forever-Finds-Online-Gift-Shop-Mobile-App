@@ -18,6 +18,8 @@ import com.example.foreverfind.model.User;
 import com.example.foreverfind.sessions.SessionManagement;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
@@ -43,33 +45,33 @@ public class Login extends AppCompatActivity {
         }
 
         else {*/
-        setContentView(R.layout.activity_login);
+            setContentView(R.layout.activity_login);
 
 
-        createAc = findViewById(R.id.btnSignup);
-        login = findViewById(R.id.btnLog);
-        phone = findViewById(R.id.delPhone);
-        password = findViewById(R.id.etPassword);
-        loadingBar = new ProgressDialog(this);
+            createAc = findViewById(R.id.btnSignup);
+            login = findViewById(R.id.btnLog);
+            phone = findViewById(R.id.etPhone);
+            password = findViewById(R.id.etPassword);
+            loadingBar = new ProgressDialog(this);
 
-        createAc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            createAc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-                Intent intent = new Intent(Login.this, Register.class);
-                startActivity(intent);
-            }
-        });
+                    Intent intent = new Intent(Login.this, Register.class);
+                    startActivity(intent);
+                }
+            });
 
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LoginUser();
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    LoginUser();
 
-            }
-        });
-    }
+                }
+            });
+        }
 
     @Override
     protected void onStart() {
@@ -80,6 +82,7 @@ public class Login extends AppCompatActivity {
         if(!phone.equals("empty")){
             if(!phone.equals("admin")) {
                 Intent intent = new Intent(Login.this, getStarted.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
             else{
@@ -98,7 +101,7 @@ public class Login extends AppCompatActivity {
         ui.setPassword(password.getText().toString());
 
 
-        if(TextUtils.isEmpty(ui.getPassword())){
+          if(TextUtils.isEmpty(ui.getPassword())){
             Toast.makeText(this, "Please Enter Your Password", Toast.LENGTH_SHORT).show();
         }
 
@@ -106,7 +109,7 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this, "Please Enter Your Mobile Number", Toast.LENGTH_SHORT).show();
         }
 
-        else{
+         else{
             loadingBar.setTitle("Login Account");
             loadingBar.setMessage("Please Wait, We Are Checking The Credentials");
 
@@ -179,5 +182,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 
 }

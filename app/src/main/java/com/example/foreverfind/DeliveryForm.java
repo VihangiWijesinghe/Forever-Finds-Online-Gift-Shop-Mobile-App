@@ -43,7 +43,7 @@ public class DeliveryForm extends AppCompatActivity {
         curUser = sm.getUser();
 
         final DBReference db = new DBReference();
-        final   DatabaseReference  dbRef  = db.getRootRef().child("Orders").child(curUser);
+        final   DatabaseReference  dbRef  = db.getRootRef().child("Order").child(curUser);
         Query query = dbRef.limitToLast(1);
 
         query.addValueEventListener(new ValueEventListener() {
@@ -100,11 +100,11 @@ public class DeliveryForm extends AppCompatActivity {
                 SessionManagement sm = new SessionManagement(DeliveryForm.this);
                 curUser = sm.getUser();
 
-                com.example.foreverfind.model.Orders or1 = new com.example.foreverfind.model.Orders();
+                com.example.foreverfind.model.Order or1 = new com.example.foreverfind.model.Order();
 
                 n++;
                 orderno += n;
-                deliveryRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(curUser);
+                deliveryRef = FirebaseDatabase.getInstance().getReference().child("Order").child(curUser);
 
 
                 or1.setRecName(resFullName.getText().toString().trim());

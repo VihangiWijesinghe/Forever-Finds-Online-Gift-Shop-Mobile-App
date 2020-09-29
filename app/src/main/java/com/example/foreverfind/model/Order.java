@@ -1,23 +1,15 @@
 package com.example.foreverfind.model;
 
-public class Orders {
+public class Order {
 
 
-    String orderNo;
-    String RecName;
-    String Daddress;
-    String ResPhone;
-    Boolean status;
+    private String orderNo;
+    private String RecName;
+    private String Daddress;
+    private String ResPhone;
+    private Boolean status;
 
-    public Orders() {
-    }
-
-    public Orders(String orderNo, String recName, String daddress, String resPhone, Boolean status) {
-        this.orderNo = orderNo;
-        RecName = recName;
-        Daddress = daddress;
-        ResPhone = resPhone;
-        this.status = status;
+    public Order() {
     }
 
     public String getOrderNo() {

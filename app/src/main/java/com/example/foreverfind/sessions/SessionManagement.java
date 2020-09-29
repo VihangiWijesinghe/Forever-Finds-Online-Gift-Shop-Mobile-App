@@ -2,12 +2,16 @@ package com.example.foreverfind.sessions;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.example.foreverfind.model.User;
 
 public class SessionManagement {
 
     SharedPreferences sp;
     String Session_key= "session_user";
     String Switch_key= "switch";
+    String hist_key= "history";
     String phone;
 
     SharedPreferences.Editor ed;
@@ -22,12 +26,23 @@ public class SessionManagement {
 
     public void saveSession(String user){
 
-        ed.putString(Session_key,user).commit();
+       ed.putString(Session_key,user).commit();
     }
 
     public void save(String s){
 
         ed.putString(Switch_key,s).commit();
+    }
+
+    public void orderPref(String date){
+
+        ed.putString(hist_key,date).commit();
+
+    }
+
+    public String getOrderPref(){
+
+        return sp.getString(hist_key,"empty");
     }
 
     public String getSwitch(){
