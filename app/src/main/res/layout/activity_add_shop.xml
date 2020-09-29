@@ -56,7 +56,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/txt_qty"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,12 +70,12 @@
         android:outlineProvider="bounds"
         android:text="@string/txt_no_items"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnDelCon"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/update"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnDelCon" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/update"
         android:layout_width="82dp"
         android:layout_height="50dp"
         android:layout_marginEnd="28dp"
@@ -95,7 +95,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/update"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView

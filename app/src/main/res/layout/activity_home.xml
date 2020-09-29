@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3BCD1"
+    android:background="#B8E4B9"
     tools:context=".home">
 
     <Button
         android:id="@+id/btn4"
         android:layout_width="219dp"
         android:layout_height="145dp"
-        android:background="#DF598E"
+        android:background="#bf265c"
         android:text="Stock"
         android:textColor="#131313"
         android:textSize="30sp"
@@ -25,7 +25,7 @@
         android:id="@+id/btn5"
         android:layout_width="217dp"
         android:layout_height="166dp"
-        android:background="#D5628F"
+        android:background="#bf265c"
         android:text="Delivery"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

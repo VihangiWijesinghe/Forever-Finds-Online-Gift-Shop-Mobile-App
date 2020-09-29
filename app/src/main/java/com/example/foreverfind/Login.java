@@ -18,8 +18,6 @@ import com.example.foreverfind.model.User;
 import com.example.foreverfind.sessions.SessionManagement;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
@@ -39,7 +37,7 @@ public class Login extends AppCompatActivity {
 
         createAc =findViewById(R.id.btnSignup);
        login=findViewById(R.id.btnLog);
-       phone = findViewById(R.id.etPhone);
+       phone = findViewById(R.id.code);
        password = findViewById(R.id.etPassword);
         loadingBar = new ProgressDialog(this);
         createAc.setOnClickListener(new View.OnClickListener() {

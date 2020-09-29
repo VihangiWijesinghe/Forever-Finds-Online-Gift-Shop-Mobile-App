@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/etPhone"
+        android:id="@+id/code"
         android:layout_width="258dp"
         android:layout_height="47dp"
         android:ems="10"

@@ -40,8 +40,8 @@ public class Register extends AppCompatActivity {
         createAcbtn=findViewById(R.id.btnCreateAcc);
         Inputname =findViewById(R.id.etName);
         Inputemail =findViewById(R.id.etEmail);
-        Inputpw = findViewById(R.id.etPw);
-        Inputphone= findViewById(R.id.etPhone);
+        Inputpw = findViewById(R.id.weight);
+        Inputphone= findViewById(R.id.code);
         Inputconpw= findViewById(R.id.etConPw);
         loadingBar = new ProgressDialog(this);
 

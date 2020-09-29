@@ -126,6 +126,15 @@
     <string name="price_rs_800">Price : </string>
     <string name="weight_1kg">Weight : </string>
     <string name="quantity_10">Quantity : </string>
+    <string name="hintq">Enter the item quantity </string>
+    <string name="hintitem">"Enter the item code "</string>
+    <string name="hintp">Enter the item price</string>
+    <string name="hintw">Enter the item weight</string>
+    <string name="hintadd">ADD</string>
+    <string name="hintqu">Enter the quantity</string>
+    <string name="itcode">Enter the item code</string>
+    <string name="hprice">Enter the item price</string>
+    <string name="readd">ADD</string>
 
     <string-array name="items">
 
