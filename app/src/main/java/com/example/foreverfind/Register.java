@@ -30,6 +30,7 @@ public class Register extends AppCompatActivity {
     private Button createAcbtn;
     private EditText Inputname , Inputpw , Inputconpw, Inputemail ,Inputphone;
     private ProgressDialog loadingBar;
+    private String parentDBName = "Users";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +39,10 @@ public class Register extends AppCompatActivity {
 
 
         createAcbtn=findViewById(R.id.btnCreateAcc);
-        Inputname =findViewById(R.id.etHName);
+        Inputname =findViewById(R.id.etName);
         Inputemail =findViewById(R.id.etEmail);
-        Inputpw = findViewById(R.id.weight);
-        Inputphone= findViewById(R.id.code);
+        Inputpw = findViewById(R.id.etPw);
+        Inputphone= findViewById(R.id.etPhonenew);
         Inputconpw= findViewById(R.id.etConPw);
         loadingBar = new ProgressDialog(this);
 
@@ -116,7 +117,8 @@ public class Register extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if (!(dataSnapshot.child("Users").child(phone).child("status").child("true").exists())){
+                User u = dataSnapshot.child(parentDBName).child(phone).getValue(User.class);
+                if (u.getStatus() != true) {
 
                     if(pw.equals(conpw) ) {
                             HashMap<String, Object> userdataMap = new HashMap<>();
@@ -145,6 +147,7 @@ public class Register extends AppCompatActivity {
                                                 SessionManagement sm = new SessionManagement(Register.this);
                                                 sm.saveSession(phone);
                                                 sm.save("switch_on");
+                                                sm.orderPref("empty");
 
                                                 Intent intent= new Intent(Register.this,getStarted.class);
                                                 startActivity(intent);

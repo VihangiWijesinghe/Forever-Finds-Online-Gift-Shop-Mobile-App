@@ -9,29 +9,17 @@
 
     <Button
         android:id="@+id/btn4"
-        android:layout_width="219dp"
-        android:layout_height="145dp"
+        android:layout_width="383dp"
+        android:layout_height="68dp"
         android:background="#bf265c"
         android:text="Stock"
-        android:textColor="#131313"
+        android:textColor="#ffff"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.315" />
 
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="217dp"
-        android:layout_height="166dp"
-        android:background="#bf265c"
-        android:text="Delivery"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
 </androidx.constraintlayout.widget.ConstraintLayout>

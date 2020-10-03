@@ -1,6 +1,5 @@
 package com.example.foreverfind;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -13,48 +12,47 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.foreverfind.model.Items;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.example.foreverfind.model.Products;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class add extends AppCompatActivity {
     Button btnaddnew;
-    EditText quantity, code, price, weight;
+    EditText description, code, price, weight;
     DatabaseReference databaseStock;
-    Items itm;
+    Products itm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(add.this,
+        final Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
+
+        final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(add.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.items));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
 
 
         btnaddnew = findViewById(R.id.btnaddnew);
-        quantity = findViewById(R.id.quantity);
+        description = findViewById(R.id.pdes);
         code = findViewById(R.id.code);
         price = findViewById(R.id.price);
         weight = findViewById(R.id.weight);
 
-        itm = new Items();
+        itm = new Products();
 
 
         btnaddnew.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View view) {
 
-                                             databaseStock = FirebaseDatabase.getInstance().getReference().child("Items");
+                                             databaseStock = FirebaseDatabase.getInstance().getReference().child("Products");
                                              try {
-                                                 if (TextUtils.isEmpty(quantity.getText().toString()))
-                                                     Toast.makeText(getApplicationContext(), "Please enter quantity", Toast.LENGTH_SHORT).show();
+                                                 if (TextUtils.isEmpty(description.getText().toString()))
+                                                     Toast.makeText(getApplicationContext(), "Please enter description", Toast.LENGTH_SHORT).show();
 
                                                  else if (TextUtils.isEmpty(code.getText().toString()))
                                                      Toast.makeText(getApplicationContext(), "Please enter the code", Toast.LENGTH_SHORT).show();
@@ -66,15 +64,17 @@ public class add extends AppCompatActivity {
                                                      Toast.makeText(getApplicationContext(), "Please enter weight", Toast.LENGTH_SHORT).show();
                                                  else {
 
-                                                     itm.setItemquan(quantity.getText().toString().trim());
-                                                     itm.setItemcode(code.getText().toString().trim());
-                                                     itm.setItemprice(price.getText().toString().trim());
+                                                     itm.setDescription(description.getText().toString().trim());
+                                                     itm.setPid(code.getText().toString().trim());
+                                                     itm.setPrice(price.getText().toString().trim());
+                                                     itm.setWeight(weight.getText().toString().trim());
+                                                    itm.setType( mySpinner.getSelectedItem().toString());
 
 
-                                                     databaseStock.push().setValue(itm);
+                                                     databaseStock.child(itm.getPid()).setValue(itm);
                                                      //dbRef.child("Std1").setValue(std);
                                                      Toast.makeText(getApplicationContext(), "items added Successfully", Toast.LENGTH_SHORT).show();
-                                                     //clearControls();
+                                                     clearControls();
                                                  }
                                              } catch (NumberFormatException e) {
                                                  Toast.makeText(getApplicationContext(), "Invalid ", Toast.LENGTH_SHORT).show();
@@ -114,17 +114,18 @@ public class add extends AppCompatActivity {
 
     }*/
 
-      /*  private void clearControls () {
 
-            itm.setItemcode("");
-            itm.setItemprice("");
-            itm.setItemquan("");
-
-
-        }*/
     }
 
+    private void clearControls() {
 
+        description.setText("");
+        code.setText("");
+        price.setText("");
+        weight.setText("");
+
+
+    }
 }
 
 

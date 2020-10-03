@@ -42,7 +42,7 @@ public class Test_login_and_shoppingCart {
     @Test
     public void test_login_and_shoppingCart() {
         ViewInteraction appCompatEditText = onView(
-                allOf(ViewMatchers.withId(R.id.delPhone),
+                allOf(ViewMatchers.withId(R.id.etPhone),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -52,7 +52,7 @@ public class Test_login_and_shoppingCart {
         appCompatEditText.perform(replaceText("0768787"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText2 = onView(
-                allOf(withId(R.id.delPhone), withText("0768787"),
+                allOf(withId(R.id.etPhone), withText("0768787"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -62,7 +62,7 @@ public class Test_login_and_shoppingCart {
         appCompatEditText2.perform(click());
 
         ViewInteraction appCompatEditText3 = onView(
-                allOf(withId(R.id.delPhone), withText("0768787"),
+                allOf(withId(R.id.etPhone), withText("0768787"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -72,7 +72,7 @@ public class Test_login_and_shoppingCart {
         appCompatEditText3.perform(replaceText("0768787676"));
 
         ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.delPhone), withText("0768787676"),
+                allOf(withId(R.id.etPhone), withText("0768787676"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),

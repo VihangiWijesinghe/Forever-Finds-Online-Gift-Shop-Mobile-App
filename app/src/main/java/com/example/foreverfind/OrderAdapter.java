@@ -52,16 +52,16 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
 
-                  String val = childSnapshot.child("status").getValue().toString();
+                    String val = childSnapshot.child("status").getValue().toString();
 
-                  if(val.equals("true"))
-                    holder.delstatus.setText("Delivered");
+                    if(val.equals("true"))
+                        holder.delstatus.setText("Delivered");
 
 
-                  else
-                      holder.delstatus.setText("In Process");
+                    else
+                        holder.delstatus.setText("In Process");
 
-                    holder.rname.setText(childSnapshot.child("RecName").getValue().toString());
+                    holder.rname.setText(childSnapshot.child("recName").getValue().toString());
                 }
             }
 
@@ -75,8 +75,9 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<
         holder.odnum.setText(key);
         holder.date.setText(model.getPdate());
 
-       // holder.amount.setText("Rs. "+childSnapshot.child("amount").getValue().toString());
+        // holder.amount.setText("Rs. "+childSnapshot.child("amount").getValue().toString());
         holder.amount.setText(model.getAmount());
+
 
     }
 

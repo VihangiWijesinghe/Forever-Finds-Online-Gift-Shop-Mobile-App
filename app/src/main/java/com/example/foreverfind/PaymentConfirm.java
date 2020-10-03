@@ -56,7 +56,7 @@ public class PaymentConfirm extends AppCompatActivity{
     TextView tvtotal;
     int keyDel;
     String a;
-    int n;
+    int n,order;
 
     String odnum="";
     String key="";
@@ -110,7 +110,7 @@ public class PaymentConfirm extends AppCompatActivity{
         });
 
         final DatabaseReference dbref2 = db.getRootRef().child("Order").child(curUser);
-        Query query2 = dbref.limitToLast(1);
+        Query query2 = dbref.orderByKey().limitToLast(1);
 
         query2.addValueEventListener(new ValueEventListener() {
             @Override
@@ -118,7 +118,7 @@ public class PaymentConfirm extends AppCompatActivity{
 
                 for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
 
-                    odnum+=childSnapshot.getKey();
+                    order=Integer.parseInt(childSnapshot.getKey());
 
                 }
 
@@ -397,11 +397,14 @@ public class PaymentConfirm extends AppCompatActivity{
                 final DatabaseReference dbref2=dbb.getRootRef().child("Payment").child(curUser);
 
                 Payment p = new Payment();
-                SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat sd = new SimpleDateFormat("yyyy/MM/dd");
                 SimpleDateFormat sd2 = new SimpleDateFormat("HH:MM:ss");
 
                 String nowdate = sd.format(Calendar.getInstance().getTime());
                 String nowt = sd2.format(Calendar.getInstance().getTime());
+
+                order++;
+                odnum+=order;
 
                 p.setCtype(ctype);
                 p.setAmount(amount);

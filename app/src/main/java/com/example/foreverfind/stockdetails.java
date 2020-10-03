@@ -4,15 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foreverfind.model.Items;
 import com.google.firebase.database.DataSnapshot;
@@ -38,8 +35,8 @@ public class stockdetails extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
       mySpinner.setAdapter(myAdapter);
 
-        quantity = findViewById(R.id.quantity);
-        code = findViewById(R.id.code);
+        quantity = findViewById(R.id.pdes);
+        code = findViewById(R.id.pdes);
         price = findViewById(R.id.price);
         weight = findViewById(R.id.weight);
 

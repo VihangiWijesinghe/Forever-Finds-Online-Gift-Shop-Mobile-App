@@ -14,12 +14,13 @@ import com.example.foreverfind.sessions.SessionManagement;
 
 public class home extends AppCompatActivity {
     Button btn4,btn5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         btn4=findViewById(R.id.btn4);
-        btn5=findViewById(R.id.btn5);
+        //btn5=findViewById(R.id.btn5);
 
 
         btn4.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +31,14 @@ public class home extends AppCompatActivity {
             }
 
         });
+
+/*        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(home.this,orders02.class);
+                startActivity(intent);
+            }
+        });*/
 
     }
     public boolean onCreateOptionsMenu(Menu menu){

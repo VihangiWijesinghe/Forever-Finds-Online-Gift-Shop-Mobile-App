@@ -7,7 +7,7 @@ public class Order {
     private String RecName;
     private String Daddress;
     private String ResPhone;
-    private Boolean status;
+    private boolean status;
 
     public Order() {
     }
@@ -44,11 +44,11 @@ public class Order {
         ResPhone = resPhone;
     }
 
-    public Boolean getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 }

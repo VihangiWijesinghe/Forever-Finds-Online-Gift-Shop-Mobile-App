@@ -65,7 +65,7 @@ public class DeliveryForm extends AppCompatActivity {
 
         btnsubmitDeliveryDet = findViewById(R.id.btn_confirmOrder);
         resFullName = findViewById(R.id.res_name);
-        DelAddress = findViewById(R.id.delPhone);
+        DelAddress = findViewById(R.id.etPhone);
         PhNumber = findViewById(R.id.resmobile);
 
         btnsubmitDeliveryDet.setOnClickListener(new View.OnClickListener(){
@@ -110,6 +110,7 @@ public class DeliveryForm extends AppCompatActivity {
                 or1.setRecName(resFullName.getText().toString().trim());
                 or1.setDaddress(DelAddress.getText().toString().trim());
                 or1.setResPhone(PhNumber.getText().toString().trim());
+                or1.setStatus(false);
 
 
                 deliveryRef.child(orderno).setValue(or1);

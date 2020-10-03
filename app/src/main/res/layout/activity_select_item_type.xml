@@ -3,73 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#B8E4B9"
     android:layout_height="match_parent"
+    android:background="#B8E4B9"
     tools:context="com.example.foreverfind.SelectItemType">
 
     <ImageView
         android:id="@+id/flow_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/cake_icon"
-        app:layout_constraintEnd_toStartOf="@+id/choc_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView37"
-        app:srcCompat="@drawable/boq4" />
+        android:layout_width="125dp"
+        android:layout_height="136dp"
 
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginBottom="75dp"
-        android:text="Select Item Type"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/flow_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188"
+        app:srcCompat="@drawable/boq4" />
 
     <ImageView
         android:id="@+id/choc_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="41dp"
-        app:layout_constraintBottom_toTopOf="@+id/teddy_icon"
+        android:layout_width="125dp"
+        android:layout_height="136dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/flow_icon"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201"
         app:srcCompat="@drawable/cho05" />
 
     <ImageView
         android:id="@+id/cake_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="190dp"
+        android:layout_width="132dp"
+        android:layout_height="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/teddy_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flow_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.633"
         app:srcCompat="@drawable/ck2" />
 
     <ImageView
         android:id="@+id/teddy_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="190dp"
+        android:layout_width="132dp"
+        android:layout_height="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cake_icon"
-        app:layout_constraintTop_toBottomOf="@+id/choc_icon"
+        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.635"
         app:srcCompat="@drawable/bearicon" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -78,14 +62,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="15dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="17dp"
         android:backgroundTint="@color/colorPrimary"
         android:elevation="6dp"
         android:src="@drawable/cart02"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

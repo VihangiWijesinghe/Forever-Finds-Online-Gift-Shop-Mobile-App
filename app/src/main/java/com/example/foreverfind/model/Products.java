@@ -9,8 +9,17 @@ public class Products {
     private String image;
     private  String type;
     private String weight;
+    private String quant;
 
     public Products() {
+    }
+
+    public String getQuant() {
+        return quant;
+    }
+
+    public void setQuant(String quant) {
+        this.quant = quant;
     }
 
     public String getPid() {

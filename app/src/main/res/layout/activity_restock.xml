@@ -18,35 +18,34 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <EditText
-        android:id="@+id/quantity"
+        android:id="@+id/pquantity"
         android:layout_width="340dp"
         android:layout_height="58dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/hintqu"
+        android:hint="Enter Quantity"
         android:inputType="textPersonName"
         android:textColor="#0C0C0C"
         android:textSize="24sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.633"
+        app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintVertical_bias="0.557" />
 
     <EditText
-        android:id="@+id/code"
+       android:id="@+id/pcode"
         android:layout_width="328dp"
         android:layout_height="62dp"
         android:ems="10"
-        android:hint="@string/itcode"
+        android:hint="Enter Product ID"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="#0C0C0C"
@@ -54,80 +53,24 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.734"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558" />
-
-    <EditText
-        android:id="@+id/price"
-        android:layout_width="329dp"
-        android:layout_height="58dp"
-        android:ems="10"
-        android:hint="@string/hprice"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:textColor="#0C0C0C"
-        android:textSize="24sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        app:layout_constraintVertical_bias="0.367" />
 
     <Button
         android:id="@+id/addbtn"
-        android:layout_width="145dp"
-        android:layout_height="45dp"
+        android:layout_width="373dp"
+        android:layout_height="59dp"
         android:background="#bf265c"
         android:text="add"
+        android:textColor="#ffff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item Type:"
-        android:textColor="#121212"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243" />
-
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="159dp"
-        android:layout_height="38dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
-
-    <Button
-        android:id="@+id/show"
-        android:layout_width="148dp"
-        android:layout_height="53dp"
-        android:backgroundTint="#bf265c"
-        android:text="Show"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.862"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.915" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

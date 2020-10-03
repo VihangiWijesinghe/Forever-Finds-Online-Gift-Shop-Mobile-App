@@ -34,7 +34,7 @@ public class Orders extends AppCompatActivity {
         String date=sm.getOrderPref();
 
 
-            if (!date.equals("empty")) {
+            if (!date.equals("empty")||date==null) {
 
                 mbase
                         = FirebaseDatabase.getInstance().getReference().child("Payment").child(p);

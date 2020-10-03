@@ -34,7 +34,7 @@ public class Messages extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
 
-        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy/MM/dd");
         String now = sd.format(Calendar.getInstance().getTime());
 
         SessionManagement sm = new SessionManagement(Messages.this);

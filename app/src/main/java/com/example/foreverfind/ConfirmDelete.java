@@ -1,5 +1,6 @@
 package com.example.foreverfind;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -10,6 +11,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.foreverfind.database.DBReference;
+import com.example.foreverfind.sessions.SessionManagement;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 
 public class ConfirmDelete extends AppCompatActivity{
 
@@ -28,7 +35,27 @@ public class ConfirmDelete extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                openDialog();
+
+                final SessionManagement sm = new SessionManagement(getApplicationContext());
+                final String phone = sm.getUser();
+                final DBReference db = new DBReference();
+                db.getRootRef().addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        if (dataSnapshot.child(db.getParentDbName()).hasChild(phone)) {
+                            db.getRootRef().child(db.getParentDbName()).child(phone).child("status").setValue(false);
+                            openDialog();
+                            sm.removeSession();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
             }
         });
 
@@ -38,7 +65,8 @@ public class ConfirmDelete extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(ConfirmDelete.this,ManageProfile.class);
+                Intent intent = new Intent(ConfirmDelete.this,PersonalProfile.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

@@ -23,28 +23,28 @@
         app:layout_constraintVertical_bias="0.086" />
 
     <EditText
-        android:id="@+id/quantity"
+        android:id="@+id/pdes"
         android:layout_width="329dp"
         android:layout_height="55dp"
         android:ems="10"
-        android:hint="@string/hintq"
+        android:hint="Enter Description"
         android:inputType="textPersonName"
         android:textColor="#0B0A0A"
         android:textSize="24sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.558" />
 
     <EditText
         android:id="@+id/code"
         android:layout_width="333dp"
         android:layout_height="44dp"
         android:ems="10"
-        android:hint="@string/hintitem"
+        android:hint="Enter Product ID"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="#0B0A0A"
@@ -52,9 +52,10 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.434" />
 
     <EditText
         android:id="@+id/price"
@@ -62,7 +63,7 @@
         android:layout_height="51dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/hintp"
+        android:hint="Enter Price"
         android:inputType="textPersonName"
         android:textColor="#0B0A0A"
         android:textSize="24sp"
@@ -79,7 +80,7 @@
         android:layout_width="336dp"
         android:layout_height="52dp"
         android:ems="10"
-        android:hint="@string/hintw"
+        android:hint="Enter Weight "
         android:inputType="textPersonName"
         android:textColor="#0B0A0A"
         android:textSize="24sp"
@@ -96,8 +97,8 @@
         android:layout_width="334dp"
         android:layout_height="55dp"
         android:background="#bf265c"
-        android:hint="@string/hintadd"
-        android:textColor="#332727"
+        android:text="Add"
+        android:textColor="#ffff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

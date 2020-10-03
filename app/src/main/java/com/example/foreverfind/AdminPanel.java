@@ -16,7 +16,7 @@ public class AdminPanel extends AppCompatActivity {
         setContentView(R.layout.activity_admin_panel);
         btn1=findViewById(R.id.btnadd);
         btn2=findViewById(R.id.btnrestock);
-        btn3=findViewById(R.id.btnview);
+        //btn3=findViewById(R.id.btnview);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +34,14 @@ public class AdminPanel extends AppCompatActivity {
             }
 
         });
-        btn3.setOnClickListener(new View.OnClickListener() {
+   /*     btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(AdminPanel.this,stockdetails.class);
                 startActivity(intent);
             }
 
-        });
+        });*/
     }
 
 }

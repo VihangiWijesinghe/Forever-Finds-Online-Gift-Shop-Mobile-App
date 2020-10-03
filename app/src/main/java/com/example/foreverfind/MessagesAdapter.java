@@ -54,7 +54,7 @@ public class MessagesAdapter extends FirebaseRecyclerAdapter<
 
 
             desc = itemView.findViewById(R.id.desc);
-            code = itemView.findViewById(R.id.code);
+            code = itemView.findViewById(R.id.pdes);
             edate = itemView.findViewById(R.id.exp);
 
         }
