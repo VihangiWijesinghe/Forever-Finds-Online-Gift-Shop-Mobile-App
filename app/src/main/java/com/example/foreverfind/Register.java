@@ -117,8 +117,14 @@ public class Register extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                User u = dataSnapshot.child(parentDBName).child(phone).getValue(User.class);
-                if (u.getStatus() != true) {
+                User u = new User();
+                u.setStatus(false);
+
+                    if  (dataSnapshot.child(parentDBName).child(phone).exists()){
+                        u= dataSnapshot.child("Users").child(phone).getValue(User.class);
+                    }
+
+                if (u.getStatus() == false) {
 
                     if(pw.equals(conpw) ) {
                             HashMap<String, Object> userdataMap = new HashMap<>();

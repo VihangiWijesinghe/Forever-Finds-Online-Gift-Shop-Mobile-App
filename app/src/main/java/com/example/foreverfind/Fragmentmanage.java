@@ -98,8 +98,7 @@ public class Fragmentmanage extends Fragment {
                             } else if (!etUpNewPass.getText().toString().equals(etUpConNew.getText().toString())) {
                                 Toast.makeText(getActivity(), "Passwords do not match", Toast.LENGTH_SHORT).show();
 
-                            } else if (etUpNewPass.getText().toString().length() < 8) {
-                                Toast.makeText(getActivity(), "Please enter a password of at least 8 characters", Toast.LENGTH_SHORT).show();
+
                             } else {
 
                                 final DBReference db = new DBReference();
