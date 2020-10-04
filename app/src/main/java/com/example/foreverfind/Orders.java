@@ -119,6 +119,10 @@ public class Orders extends AppCompatActivity {
                 intent = new Intent(Orders.this,Messages.class);
                 startActivity(intent);
                 return true;
+            case R.id.nav_items:
+                intent = new Intent(Orders.this,SelectItemType.class);
+                startActivity(intent);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);

@@ -173,6 +173,11 @@ public class PaymentSummary extends AppCompatActivity{
                 startActivity(intent);
                 return true;
 
+            case R.id.nav_items:
+                intent = new Intent(PaymentSummary.this,SelectItemType.class);
+                startActivity(intent);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 

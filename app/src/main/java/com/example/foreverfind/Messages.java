@@ -128,6 +128,11 @@ public class Messages extends AppCompatActivity {
                 startActivity(intent);
                 return true;
 
+            case R.id.nav_items:
+                intent = new Intent(Messages.this,SelectItemType.class);
+                startActivity(intent);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 
