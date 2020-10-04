@@ -88,6 +88,11 @@ public class PaymentMethod extends AppCompatActivity{
                 startActivity(intent);
                 return true;
 
+            case R.id.nav_items:
+                intent = new Intent(PaymentMethod.this,SelectItemType.class);
+                startActivity(intent);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 

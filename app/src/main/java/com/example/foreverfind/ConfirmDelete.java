@@ -116,6 +116,11 @@ public class ConfirmDelete extends AppCompatActivity{
                 startActivity(intent);
                 return true;
 
+            case R.id.nav_items:
+                intent = new Intent(ConfirmDelete.this,SelectItemType.class);
+                startActivity(intent);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
 
