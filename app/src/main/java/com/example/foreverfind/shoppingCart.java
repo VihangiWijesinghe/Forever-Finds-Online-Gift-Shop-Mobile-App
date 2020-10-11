@@ -32,7 +32,7 @@ public class shoppingCart extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private Button NextProcessbtn;
+    private Button NextProcessbtn , GetTotalBtn ;
     private TextView txt_totalPrice;
 
     private int overallPrice = 0;
@@ -54,14 +54,24 @@ public class shoppingCart extends AppCompatActivity {
 
         NextProcessbtn = findViewById(R.id.next_process_btn);
         txt_totalPrice = findViewById(R.id.total_price);
+        GetTotalBtn  = findViewById(R.id.getTotBtn);
 
 
         overallPrice=0;
+
+        GetTotalBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txt_totalPrice.setText("Total Price : " + String.valueOf(overallPrice) + "Rs");
+            }
+        });
+
+
         NextProcessbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                txt_totalPrice.setText("Total Price : " + String.valueOf(overallPrice) + "Rs");
+
                 Intent intent= new Intent(shoppingCart.this,DeliveryForm.class); //savani
                 intent.putExtra("Total price",String.valueOf(overallPrice));
                 startActivity(intent);
@@ -154,6 +164,7 @@ public class shoppingCart extends AppCompatActivity {
 
                                                         if(task.isSuccessful()){
                                                             Toast.makeText(shoppingCart.this, "Item Removed Successfully", Toast.LENGTH_SHORT).show();
+                                                            txt_totalPrice.setText("Total Price : ");
 
                                                             //Intent intent= new Intent(shoppingCart.this,mainpage.class);
                                                            // startActivity(intent);
